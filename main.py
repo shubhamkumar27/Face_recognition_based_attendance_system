@@ -80,6 +80,7 @@ def change_pass():
     global master
     master = tk.Tk()
     master.geometry("400x160")
+    master.resizable(False,False)
     master.title("Change Password")
     master.configure(background="white")
     lbl4 = tk.Label(master,text='    Enter Old Password',bg='white',font=('times', 12, ' bold '))
@@ -355,6 +356,7 @@ mont={'01':'January',
 
 window = tk.Tk()
 window.geometry("1280x720")
+window.resizable(True,False)
 window.title("Attendance System")
 window.configure(background='#262523')
 
@@ -429,7 +431,7 @@ filemenu.add_command(label='Contact Us', command = contact)
 filemenu.add_command(label='Exit',command = window.destroy)
 menubar.add_cascade(label='Help',font=('times', 29, ' bold '),menu=filemenu)
 
-###################### TREEVIEW TABLE ##########################
+################## TREEVIEW ATTENDANCE TABLE ####################
 
 tv= ttk.Treeview(frame1,height =13,columns = ('name','date','time'))
 tv.column('#0',width=82)
