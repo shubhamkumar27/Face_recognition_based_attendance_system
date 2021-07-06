@@ -15,6 +15,9 @@ FEATURES:
 4) Creates a new CSV file everyday for attendance and marks attendance with proper date and time.
 5) Displays live attendance updates for the day on the main screen in tabular format with Id, name, date and time.
 
+### For more information:
+https://machinelearningprojects.net/how-to-perform-face-recognition-using-knn/
+
 # SCREENSHOTS
 MAIN SCREEN:
 ![Screenshot (9)](https://user-images.githubusercontent.com/37211676/58502148-97ec2a00-81a3-11e9-963e-674b9c3e05dc.png)
@@ -30,6 +33,3 @@ HELP OPTION IN MENUBAR:
 
 CHANGE PASSWORD OPTION:
 ![Screenshot (13)](https://user-images.githubusercontent.com/37211676/58502146-97539380-81a3-11e9-8536-0c68160ecc55.png)
-
-### For more information:
-https://machinelearningprojects.net/how-to-perform-face-recognition-using-knn/
