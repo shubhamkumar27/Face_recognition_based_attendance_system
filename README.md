@@ -30,3 +30,6 @@ HELP OPTION IN MENUBAR:
 
 CHANGE PASSWORD OPTION:
 ![Screenshot (13)](https://user-images.githubusercontent.com/37211676/58502146-97539380-81a3-11e9-8536-0c68160ecc55.png)
+
+### For more information:
+https://machinelearningprojects.net/how-to-perform-face-recognition-using-knn/
