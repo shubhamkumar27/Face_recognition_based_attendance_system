@@ -16,7 +16,7 @@ FEATURES:
 5) Displays live attendance updates for the day on the main screen in tabular format with Id, name, date and time.
 
 ### For more information:
-https://machinelearningprojects.net/how-to-perform-face-recognition-using-knn/
+https://machinelearningprojects.net/face-recognition-based-attendance-system/
 
 # SCREENSHOTS
 MAIN SCREEN:
