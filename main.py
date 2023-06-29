@@ -28,15 +28,14 @@ def tick():
 ###################################################################################
 
 def contact():
-    mess._show(title='Contact us', message="Please contact us on : 'xxxxxxxxxxxxx@gmail.com' ")
+    mess.showinfo(title='Contact us', message="Please contact us on : 'xxxxxxxxxxxxx@gmail.com' ")
 
 ###################################################################################
 
 def check_haarcascadefile():
     exists = os.path.isfile("haarcascade_frontalface_default.xml")
-    if exists:
-        pass
-    else:
+    if not exists:
+
         mess._show(title='Some file missing', message='Please contact us for help')
         window.destroy()
 
@@ -77,12 +76,12 @@ def save_pass():
 ###################################################################################
 
 def change_pass():
-    global master
+    global master,old, new, nnew
     master = tk.Tk()
     master.geometry("400x160")
     master.resizable(False,False)
     master.title("Change Password")
-    master.configure(background="white")
+    master.configure(background="Black")
     lbl4 = tk.Label(master,text='    Enter Old Password',bg='white',font=('times', 12, ' bold '))
     lbl4.place(x=10,y=10)
     global old
@@ -424,12 +423,13 @@ message.configure(text='Total Registrations till now  : '+str(res))
 
 ##################### MENUBAR #################################
 
-menubar = tk.Menu(window,relief='ridge')
+menubar = tk.Menu(window,relief='ridge',font=('times', 12, 'bold'))
 filemenu = tk.Menu(menubar,tearoff=0)
 filemenu.add_command(label='Change Password', command = change_pass)
 filemenu.add_command(label='Contact Us', command = contact)
 filemenu.add_command(label='Exit',command = window.destroy)
 menubar.add_cascade(label='Help',font=('times', 29, ' bold '),menu=filemenu)
+
 
 ################## TREEVIEW ATTENDANCE TABLE ####################
 
@@ -440,9 +440,9 @@ tv.column('date',width=133)
 tv.column('time',width=133)
 tv.grid(row=2,column=0,padx=(0,0),pady=(150,0),columnspan=4)
 tv.heading('#0',text ='ID')
-tv.heading('name',text ='NAME')
-tv.heading('date',text ='DATE')
-tv.heading('time',text ='TIME')
+tv.heading('name',text ='NAME', anchor=tk.CENTER)
+tv.heading('date',text ='DATE', anchor=tk.CENTER)
+tv.heading('time',text ='TIME', anchor=tk.CENTER)
 
 ###################### SCROLLBAR ################################
 
