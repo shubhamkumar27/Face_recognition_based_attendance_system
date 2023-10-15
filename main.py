@@ -132,12 +132,14 @@ def psw():
 ######################################################################################
 
 def clear():
+    global txt, txt2
     txt.delete(0, 'end')
     res = "1)Take Images  >>>  2)Save Profile"
     message1.configure(text=res)
 
 
 def clear2():
+    global txt, txt2
     txt2.delete(0, 'end')
     res = "1)Take Images  >>>  2)Save Profile"
     message1.configure(text=res)
@@ -145,6 +147,7 @@ def clear2():
 #######################################################################################
 
 def TakeImages():
+    global txt, txt2
     check_haarcascadefile()
     columns = ['SERIAL NO.', '', 'ID', '', 'NAME']
     assure_path_exists("StudentDetails/")
@@ -391,14 +394,28 @@ head1.place(x=0,y=0)
 lbl = tk.Label(frame2, text="Enter ID",width=20  ,height=1  ,fg="black"  ,bg="#00aeff" ,font=('times', 17, ' bold ') )
 lbl.place(x=80, y=55)
 
-txt = tk.Entry(frame2,width=32 ,fg="black",font=('times', 15, ' bold '))
-txt.place(x=30, y=88)
+# txt = tk.Entry(frame2,width=32 ,fg="black",font=('times', 15, ' bold '))
+# txt.place(x=30, y=88)
 
 lbl2 = tk.Label(frame2, text="Enter Name",width=20  ,fg="black"  ,bg="#00aeff" ,font=('times', 17, ' bold '))
 lbl2.place(x=80, y=140)
+# # Suggested change:
+txt = tk.Entry(frame2, width=32, fg="black", font=('times', 15, 'bold'))
+txt.grid(row=1, column=0, padx=10, pady=58)
+# txt = tk.Entry(frame2, width=32, fg="black", font=('times', 15, ' bold '))
+# txt.grid(row=1, column=1, padx=10, pady=10)
 
-txt2 = tk.Entry(frame2,width=32 ,fg="black",font=('times', 15, ' bold ')  )
-txt2.place(x=30, y=173)
+# txt2 = tk.Entry(frame2, width=32, fg="black", font=('times', 15, ' bold '))
+# txt2.grid(row=2, column=1, padx=10, pady=10)
+# Suggested change:
+# txt = tk.Entry(frame2, width=32, fg="black", font=('times', 15, 'bold'))
+# txt.pack(padx=10, pady=10)
+
+# txt2 = tk.Entry(frame2, width=32, fg="black", font=('times', 15, 'bold'))
+# txt2.pack(padx=10, pady=10)
+txt2 = tk.Entry(frame2, width=32, fg="black", font=('times', 15, 'bold'))
+txt2.grid(row=2, column=0, padx=10, pady=1)
+
 
 message1 = tk.Label(frame2, text="1)Take Images  >>>  2)Save Profile" ,bg="#00aeff" ,fg="black"  ,width=39 ,height=1, activebackground = "yellow" ,font=('times', 15, ' bold '))
 message1.place(x=7, y=230)
